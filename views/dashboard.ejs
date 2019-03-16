@@ -1,0 +1,19 @@
+<h1 class="mt-4">Dashboard</h1>
+<p class="lead mb-3">Welcome <%= name %></p>
+<p class="lead mb-4">Your Email <%= email %></p>
+
+<a href="/users/logout" class="btn btn-secondary">Logout</a>
+<a href="/articles/create" class="btn btn-primary">Post Article</a>
+<hr>
+
+<div class="card">
+    <div class="card-header">
+      Post Title Here....
+    </div>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <p>Description of the article here</p>
+        <footer class="blockquote-footer">Author Name <cite title="Source Title"><%= name %></cite></footer>
+      </blockquote>
+    </div>
+  </div>
