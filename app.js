@@ -55,6 +55,14 @@ app.use('/', require('./routes/index'));
 app.use('/users', require('./routes/users'));
 app.use('/articles', require('./routes/articles'));
 
+// Grab the data
+app.get("/articles/postsdata", (req, res) => {
+    Article.find({}, (err, data) => {
+       res.render('articles/posts', { articles: data})
+    });
+ });
+
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, console.log(`Server started on port ${PORT}`));

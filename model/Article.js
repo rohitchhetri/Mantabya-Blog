@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const ArticlesSchema = new mongoose.Schema({
   title: String,
-  desc: String,
+  body: String,
   author: String,
 }, { timestamps: true });
 
